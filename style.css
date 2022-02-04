@@ -25,15 +25,48 @@ h1{
 }
 .curiosity1{
     width:15vw;
-    height:20vw;
+    height:40vh;
     background-image:url('img/Memória_\(O_coração\).jpg');
     background-size:cover;
     background-position:center;
     border-radius:5%;
 }
+.curiosity1:hover{
+    animation: flip-vertical-left 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+@-webkit-keyframes flip-vertical-left {
+    0% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+    }
+    100% {
+      -webkit-transform: rotateY(-180deg);
+              transform: rotateY(-180deg);
+    }
+  }
+  @keyframes flip-vertical-left {
+    0% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+    }
+    100% {
+      -webkit-transform: rotateY(-180deg);
+              transform: rotateY(-180deg);
+    }
+  }
+.curiosity1:hover::before{
+    border-radius:5%;
+    width:15vw;
+    height:40vh;
+    display:block;
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+    content:'';
+    text-align:right;
+    font-size:1.7rem;
+}
 .curiosity2{
     width:15vw;
-    height:20vw;
+    height:40vh;
     background-image:url('img/as-duas-fridas-cke.jpg');
     background-repeat:no-repeat;
     background-size:cover;
@@ -42,7 +75,7 @@ h1{
 }
 .curiosity3{
     width:15vw;
-    height:20vw;
+    height:40vh;
     background-image:url('img/OficinaFridaKahlo1.jpg');
     background-repeat:no-repeat;
     background-size:cover;
@@ -51,7 +84,7 @@ h1{
 }
 .curiosity4{
     width:15vw;
-    height:20vw;
+    height:40vh;
     background-image:url('img/Frida-Kahlo-Diego-en-mi-pensamiento-Frida-de-Tehuana-.jfif');
     background-repeat:no-repeat;
     background-size:cover;
@@ -60,7 +93,7 @@ h1{
 }
 .curiosity5{
     width:15vw;
-    height:20vw;
+    height:40vh;
     background-image:url('img/el\ abrazo\ del\ universo.webp');
     background-repeat:no-repeat;
     background-size:cover;

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 *{
     padding:0;
     margin:0;
@@ -26,45 +27,55 @@ h1{
 .curiosity1{
     width:15vw;
     height:40vh;
+    perspective:700px;
+}
+.curiosity1-front{
+    width:15vw;
+    height:40vh;
     background-image:url('img/Memória_\(O_coração\).jpg');
     background-size:cover;
     background-position:center;
     border-radius:5%;
+    position:absolute;
+    z-index:1;
+    transition:1s;
 }
-.curiosity1:hover{
-    animation: flip-vertical-left 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+.curiosity1:hover .curiosity1-front{
+    transform:rotateY(180deg);
+    z-index:0;
+    cursor: pointer;
 }
-@-webkit-keyframes flip-vertical-left {
-    0% {
-      -webkit-transform: rotateY(0);
-              transform: rotateY(0);
-    }
-    100% {
-      -webkit-transform: rotateY(-180deg);
-              transform: rotateY(-180deg);
-    }
-  }
-  @keyframes flip-vertical-left {
-    0% {
-      -webkit-transform: rotateY(0);
-              transform: rotateY(0);
-    }
-    100% {
-      -webkit-transform: rotateY(-180deg);
-              transform: rotateY(-180deg);
-    }
-  }
-.curiosity1:hover::before{
-    border-radius:5%;
+.curiosity1-back{
     width:15vw;
     height:40vh;
-    display:block;
-    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
-    content:'';
-    text-align:right;
-    font-size:1.7rem;
+    border-radius:5%;
+    background-color:#9400D3;
+    position:absolute;
+    transform:rotateY(-180deg);
+    transition:1s;
+    backface-visibility:hidden;
+    text-align:center;
+    color:white;
+    font-size:1.2rem;
+    padding-top:1.5vh;
+}
+.p1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:1rem;
+    width:97%;
+    padding-top:3vh;
+    padding-bottom:2vh;
+}
+.curiosity1:hover .curiosity1-back{
+    transform: rotateY(0);
+    z-index:1;
 }
 .curiosity2{
+    width:15vw;
+    height:40vh;
+    perspective:700px;
+}
+.curiosity2-front{
     width:15vw;
     height:40vh;
     background-image:url('img/as-duas-fridas-cke.jpg');
@@ -72,8 +83,39 @@ h1{
     background-size:cover;
     background-position:center;
     border-radius:5%;
+    position:absolute;
+    z-index:1;
+    transition:1s;
+}
+.curiosity2:hover .curiosity2-front{
+    transform:rotateY(180deg);
+    z-index:0;
+    cursor: pointer;
+}
+.curiosity2-back{
+    width:15vw;
+    height:40vh;
+    border-radius:5%;
+    background-color:#9932CC;
+    position:absolute;
+    transform:rotateY(-180deg);
+    transition:1s;
+    backface-visibility:hidden;
+    text-align:center;
+    color:white;
+    font-size:1.2rem;
+    padding-top:1.5vh;
+}
+.curiosity2:hover .curiosity2-back{
+    transform: rotateY(0);
+    z-index:1;
 }
 .curiosity3{
+    width:15vw;
+    height:40vh;
+    perspective:700px;
+}
+.curiosity3-front{
     width:15vw;
     height:40vh;
     background-image:url('img/OficinaFridaKahlo1.jpg');
@@ -81,22 +123,111 @@ h1{
     background-size:cover;
     background-position:center;
     border-radius:5%;
+    border-radius:5%;
+    position:absolute;
+    z-index:1;
+    transition:1s;
+}
+.curiosity3:hover .curiosity3-front{
+    transform:rotateY(180deg);
+    z-index:0;
+    cursor:pointer;
+}
+.curiosity3-back{
+    width:15vw;
+    height:40vh;
+    border-radius:5%;
+    background-color:#BA55D3;
+    position:absolute;
+    transform:rotateY(-180deg);
+    transition:1s;
+    backface-visibility:hidden;
+    text-align:center;
+    color:white;
+    font-size:1.2rem;
+    padding-top:1.5vh;
+}
+.curiosity3:hover .curiosity3-back{
+    transform: rotateY(0);
+    z-index:1;
 }
 .curiosity4{
     width:15vw;
     height:40vh;
-    background-image:url('img/Frida-Kahlo-Diego-en-mi-pensamiento-Frida-de-Tehuana-.jfif');
+    perspective:700px;   
+}
+.curiosity4-front{
+    width:15vw;
+    height:40vh;
+    background-image:url('img/ng6754204.jpg');
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
     border-radius:5%;
+    position:absolute;
+    z-index:1;
+    transition:1s;
+}
+.curiosity4:hover .curiosity4-front{
+    transform:rotateY(180deg);
+    z-index:0;
+    cursor:pointer;
+}
+.curiosity4-back{
+    width:15vw;
+    height:40vh;
+    border-radius:5%;
+    background-color:#DA70D6;
+    position:absolute;
+    transform:rotateY(-180deg);
+    transition:1s;
+    backface-visibility:hidden;
+    text-align:center;
+    color:white;
+    font-size:1.2rem;
+    padding-top:1.5vh;
+}
+.curiosity4:hover .curiosity4-back{
+    transform: rotateY(0);
+    z-index:1;
 }
 .curiosity5{
     width:15vw;
     height:40vh;
-    background-image:url('img/el\ abrazo\ del\ universo.webp');
+    perspective:700px;
+}
+.curiosity5-front{
+    width:15vw;
+    height:40vh;
+    background-image:url('img/o\ veado\ ferido.jpg.crdownload');
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
     border-radius:5%;
+    position:absolute;
+    z-index:1;
+    transition:1s;
+}
+.curiosity5:hover .curiosity5-front{
+    transform:rotateY(180deg);
+    z-index:0;
+    cursor:pointer;
+}
+.curiosity5-back{
+    width:15vw;
+    height:40vh;
+    border-radius:5%;
+    background-color:#DDA0DD;
+    position:absolute;
+    transform:rotateY(-180deg);
+    transition:1s;
+    backface-visibility:hidden;
+    text-align:center;
+    color:white;
+    font-size:1.2rem;
+    padding-top:1.5vh;
+}
+.curiosity5:hover .curiosity5-back{
+    transform: rotateY(0);
+    z-index:1;
 }
